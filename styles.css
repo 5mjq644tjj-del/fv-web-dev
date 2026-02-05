@@ -299,3 +299,14 @@ input:focus, textarea:focus{
   }
   .nav-links.is-open{ display: flex; }
 }
+
+/* Header link reset (fixes purple/underlined links) */
+header a,
+header a:visited {
+  color: rgba(15,20,26,.9);
+  text-decoration: none;
+}
+header a:hover {
+  text-decoration: underline;
+}
+
