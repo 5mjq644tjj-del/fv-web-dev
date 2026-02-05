@@ -4,17 +4,15 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Contacts | FV Web Development</title>
-  <meta name="description" content="Contact FV Web Development. Phone, email, and WhatsApp button. Based in Rome, Italy." />
-  <meta name="robots" content="index, follow" />
+  <meta name="description" content="Contact FV Web Development in Rome. Phone, email, and WhatsApp message button." />
   <link rel="stylesheet" href="styles.css" />
 </head>
-
 <body>
-  <header class="site-header">
-    <nav class="nav">
+  <header class="header">
+    <nav class="nav container">
       <a class="brand" href="index.html" aria-label="FV Web Development Home">
         <span class="brand-mark">FV</span>
-        <span class="brand-text">Web Development</span>
+        <span class="brand-name">FV Web Development</span>
       </a>
 
       <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
@@ -22,139 +20,94 @@
       </button>
 
       <div class="nav-links" data-nav>
+        <a href="index.html">Home</a>
         <a href="services.html">Services</a>
         <a class="active" href="contacts.html">Contacts</a>
-        <a class="nav-cta" href="#contact-form">Get a Quote</a>
       </div>
     </nav>
   </header>
 
-  <main>
-    <section class="page-hero">
-      <div class="container">
-        <h1>Contacts</h1>
-        <p class="lead">Reach me directly. Fast replies during business hours.</p>
-      </div>
-    </section>
+  <main class="container page">
+    <header class="page-header">
+      <h1>Contacts</h1>
+      <p class="lead">Direct contact. Fast replies during business hours.</p>
+    </header>
 
-    <section class="section container">
-      <div class="grid-2">
-        <div class="card">
-          <h2>Direct contact</h2>
+    <section class="grid">
+      <article class="card">
+        <h2>Contact details</h2>
 
-          <!-- Replace placeholders with your real info -->
-          <div class="contact-list">
-            <div class="contact-item">
-              <div class="contact-label">Phone</div>
-              <a class="contact-value" href="tel:+393331112222">+39 333 111 2222</a>
-            </div>
-
-            <div class="contact-item">
-              <div class="contact-label">Email</div>
-              <a class="contact-value" href="mailto:fvwebdevelopment@example.com">fvwebdevelopment@example.com</a>
-            </div>
-
-            <div class="contact-item">
-              <div class="contact-label">Location</div>
-              <div class="contact-value">Rome, Italy</div>
-            </div>
+        <!-- Replace with your real info -->
+        <div class="contact-list">
+          <div class="contact-row">
+            <div class="label">Phone</div>
+            <a class="value" href="tel:+393331112222">+39 333 111 2222</a>
           </div>
 
-          <div class="inline-actions" id="whatsapp">
-            <!-- Replace phone in wa.me with your WhatsApp number: countrycode + number, no +, no spaces -->
-            <a class="btn btn-primary"
-               href="https://wa.me/393331112222?text=Hi%20FV%20Web%20Development%2C%20I%27d%20like%20a%20website%20quote."
-               target="_blank" rel="noopener">
-              Message on WhatsApp
-            </a>
-            <a class="btn btn-secondary" href="services.html">View Services</a>
+          <div class="contact-row">
+            <div class="label">Email</div>
+            <a class="value" href="mailto:fvwebdevelopment@example.com">fvwebdevelopment@example.com</a>
           </div>
 
-          <p class="note">
-            Tip: For best results, include your business type and what you want (website, Google Maps, maintenance).
-          </p>
-        </div>
-
-        <div class="card">
-          <h2>Service area</h2>
-          <p>I mainly work with businesses in Rome. Remote work is possible depending on the project.</p>
-
-          <div class="map-wrap" aria-label="Map">
-            <iframe
-              title="Rome Map"
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-              src="https://www.google.com/maps?q=Rome%20Italy&output=embed">
-            </iframe>
+          <div class="contact-row">
+            <div class="label">Location</div>
+            <div class="value">Rome, Italy</div>
           </div>
         </div>
-      </div>
-    </section>
 
-    <section class="section container" id="contact-form">
-      <div class="card">
+        <div class="cta-actions" id="whatsapp">
+          <!-- Replace number: countrycode+number, no +, no spaces -->
+          <a class="btn btn-primary"
+             href="https://wa.me/393331112222?text=Hi%20FV%20Web%20Development%2C%20I%27d%20like%20a%20quote%20for%20a%20website."
+             target="_blank" rel="noopener">
+            Message on WhatsApp
+          </a>
+        </div>
+
+        <p class="small">
+          Tip: Include your business type and what you need (website, Google Maps, maintenance).
+        </p>
+      </article>
+
+      <article class="card" id="contact-form">
         <h2>Request a quote</h2>
-        <p class="lead-small">Fill this out. I’ll reply with next steps.</p>
+        <p class="small">This is a simple form. You can connect it to a real backend later.</p>
 
-        <!-- This form uses a mailto fallback. For a real form, connect Netlify Forms / Formspree later. -->
-        <form class="form" action="mailto:fvwebdevelopment@example.com" method="post" enctype="text/plain">
-          <div class="form-row">
-            <label>
-              Name
-              <input required type="text" name="name" placeholder="Your name" />
-            </label>
-            <label>
-              Business
-              <input type="text" name="business" placeholder="Business name" />
-            </label>
-          </div>
-
-          <div class="form-row">
-            <label>
-              Phone
-              <input type="tel" name="phone" placeholder="+39 ..." />
-            </label>
-            <label>
-              Email
-              <input required type="email" name="email" placeholder="you@email.com" />
-            </label>
-          </div>
-
+        <!-- Simple local-only demo. Replace action with Formspree/Netlify later. -->
+        <form class="form" onsubmit="return handleContactSubmit(event)">
           <label>
-            What do you need?
-            <select name="service">
-              <option>Website</option>
-              <option>Google Maps Optimization</option>
-              <option>Website + Google Maps</option>
-              <option>Maintenance</option>
-            </select>
+            Name
+            <input required name="name" type="text" placeholder="Your name" />
           </label>
 
           <label>
-            Details
-            <textarea name="details" rows="5" placeholder="Describe your business and what you want."></textarea>
+            Email
+            <input required name="email" type="email" placeholder="you@email.com" />
+          </label>
+
+          <label>
+            Message
+            <textarea required name="message" rows="5" placeholder="What do you need?"></textarea>
           </label>
 
           <button class="btn btn-primary" type="submit">Send</button>
-          <p class="note">Replace the email and WhatsApp number with your real contact info.</p>
+          <p class="small" id="form-status" aria-live="polite"></p>
         </form>
-      </div>
+      </article>
     </section>
   </main>
 
   <footer class="footer">
     <div class="container footer-inner">
-      <div>
+      <div class="footer-left">
         <div class="footer-brand">FV Web Development</div>
-        <div class="footer-small">Rome, Italy</div>
+        <div class="footer-meta">Rome, Italy</div>
       </div>
-      <div class="footer-links">
+      <div class="footer-right">
         <a href="index.html">Home</a>
         <a href="services.html">Services</a>
       </div>
-      <div class="footer-small">
-        © <span id="year"></span> FV Web Development.
-      </div>
+      <div class="footer-meta">© <span id="year"></span> FV Web Development</div>
     </div>
   </footer>
 
