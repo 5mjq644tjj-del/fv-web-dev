@@ -92,3 +92,10 @@ input[type="text"],input[type="tel"],textarea{width:100%;padding:10px;border-rad
   .about-grid{grid-template-columns:1fr 420px}
   .contact-grid{grid-template-columns:360px 1fr}
 }
+/* Service card images */
+.card img {
+  width: 100%;
+  height: 200px;      /* change this value */
+  object-fit: cover;
+  border-radius: 12px;
+}
