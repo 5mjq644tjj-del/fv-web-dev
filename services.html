@@ -4,17 +4,15 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Services | FV Web Development</title>
-  <meta name="description" content="FV Web Development services: websites, Google Maps optimization, WhatsApp integration, and maintenance for local businesses in Rome." />
-  <meta name="robots" content="index, follow" />
+  <meta name="description" content="Website creation, Google Maps optimization, WhatsApp integration, and maintenance for local businesses in Rome." />
   <link rel="stylesheet" href="styles.css" />
 </head>
-
 <body>
-  <header class="site-header">
-    <nav class="nav">
+  <header class="header">
+    <nav class="nav container">
       <a class="brand" href="index.html" aria-label="FV Web Development Home">
         <span class="brand-mark">FV</span>
-        <span class="brand-text">Web Development</span>
+        <span class="brand-name">FV Web Development</span>
       </a>
 
       <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
@@ -22,111 +20,74 @@
       </button>
 
       <div class="nav-links" data-nav>
+        <a href="index.html">Home</a>
         <a class="active" href="services.html">Services</a>
         <a href="contacts.html">Contacts</a>
-        <a class="nav-cta" href="contacts.html#contact-form">Get a Quote</a>
       </div>
     </nav>
   </header>
 
-  <main>
-    <section class="page-hero">
-      <div class="container">
-        <h1>Services</h1>
-        <p class="lead">
-  Clear outcomes, not fluff: make customers trust you and contact you.
-</p>
-      </div>
+  <main class="container page">
+    <header class="page-header">
+      <h1>Services</h1>
+      <p class="lead">Clear deliverables designed to increase trust and generate contacts.</p>
+    </header>
+
+    <section class="grid">
+      <article class="card">
+        <h2>Website Design & Development</h2>
+        <p>
+          A clean, fast, mobile-first website that makes your business look credible and makes it easy
+          for customers to contact you.
+        </p>
+      </article>
+
+      <article class="card">
+        <h2>Google Maps / Google Business Profile Optimization</h2>
+        <p>
+          Improve your listing so people who find you on Google or Maps trust you quickly and convert into
+          calls or messages.
+        </p>
+      </article>
+
+      <article class="card">
+        <h2>WhatsApp & Contact Integration</h2>
+        <p>
+          Reduce friction with a WhatsApp button, click-to-call, and a simple contact form so customers reach
+          you in one tap.
+        </p>
+      </article>
+
+      <article class="card">
+        <h2>Maintenance & Updates</h2>
+        <p>
+          Keep your website accurate, secure, and up to date with small content changes and routine checks
+          so nothing breaks.
+        </p>
+      </article>
     </section>
 
-    <section class="section container">
-      <div class="services-grid">
-        <article class="service-card">
-          <h2>1) Website Creation (Custom)</h2>
-          <p>
-            A clean, mobile-first website designed for trust and conversion. Ideal for local businesses
-            that need a professional presence.
-          </p>
-          <ul class="checklist">
-            <li>Modern design, fast loading</li>
-            <li>Home + Services + Contact + About</li>
-            <li>Click-to-call, WhatsApp button, contact form</li>
-            <li>Google Maps embed + local SEO basics</li>
-          </ul>
-        </article>
-
-        <article class="service-card">
-          <h2>2) Google Maps / Google Business Profile Optimization</h2>
-          <p>
-            Your listing is your storefront. I optimize it so people searching on Google/Maps trust you and contact you.
-          </p>
-          <ul class="checklist">
-            <li>Website link added + information consistency</li>
-            <li>Services filled clearly</li>
-            <li>Photo strategy (what to post & how often)</li>
-            <li>Conversion-focused description</li>
-          </ul>
-        </article>
-
-        <article class="service-card">
-          <h2>3) WhatsApp + Contact System</h2>
-          <p>
-            Reduce friction. Make it effortless for customers to reach you. This is where you win easy conversions.
-          </p>
-          <ul class="checklist">
-            <li>WhatsApp click-to-chat</li>
-            <li>Click-to-call button for mobile users</li>
-            <li>Contact form with clear CTAs</li>
-            <li>Optional: FAQ to reduce repetitive calls</li>
-          </ul>
-        </article>
-
-        <article class="service-card">
-          <h2>4) Maintenance & Updates (Monthly)</h2>
-          <p>
-            Keep everything fast, secure, and accurate. Owners should not worry about updates, broken links, or outdated info.
-          </p>
-          <ul class="checklist">
-            <li>Small text/photo updates</li>
-            <li>Basic technical checks & backups</li>
-            <li>Google Maps info updates (hours, services)</li>
-            <li>Monthly check-in and change log</li>
-          </ul>
-        </article>
-      </div>
-    </section>
-
-    <section class="section container">
-      <div class="card">
-        <h2>Process (How it works)</h2>
-        <ol class="steps">
-          <li><strong>Quick audit:</strong> current website/Maps issues and opportunities</li>
-          <li><strong>Build:</strong> design + copy + structure focused on conversions</li>
-          <li><strong>Integrate:</strong> call/WhatsApp/forms + Maps + essentials</li>
-          <li><strong>Launch:</strong> testing + go live + final checks</li>
-          <li><strong>Support:</strong> optional monthly maintenance</li>
-        </ol>
-        <div class="inline-actions">
-          <a class="btn btn-primary" href="contacts.html#contact-form">Request a Quote</a>
-          <a class="btn btn-secondary" href="contacts.html#whatsapp">Message on WhatsApp</a>
-        </div>
+    <section class="cta card">
+      <h2>Ready to move?</h2>
+      <p>Send a short message with your business type and what you need. I’ll reply with next steps.</p>
+      <div class="cta-actions">
+        <a class="btn btn-primary" href="contacts.html#whatsapp">Message on WhatsApp</a>
+        <a class="btn btn-secondary" href="contacts.html#contact-form">Request a Quote</a>
       </div>
     </section>
   </main>
 
   <footer class="footer">
     <div class="container footer-inner">
-      <div>
+      <div class="footer-left">
         <div class="footer-brand">FV Web Development</div>
-        <div class="footer-small">Rome, Italy</div>
+        <div class="footer-meta">Rome, Italy</div>
       </div>
-      <div class="footer-links">
+      <div class="footer-right">
         <a href="index.html">Home</a>
         <a href="contacts.html">Contacts</a>
       </div>
-      <div class="footer-small">
-        © <span id="year"></span> FV Web Development.
-      </div>
+      <div class="footer-meta">© <span id="year"></span> FV Web Development</div>
     </div>
   </footer>
 
