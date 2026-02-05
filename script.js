@@ -1,4 +1,4 @@
-// Set year in footer
+// Footer year
 (() => {
   const y = document.getElementById("year");
   if (y) y.textContent = String(new Date().getFullYear());
@@ -15,7 +15,6 @@
     btn.setAttribute("aria-expanded", String(open));
   });
 
-  // Close menu when clicking a link (mobile)
   nav.querySelectorAll("a").forEach(a => {
     a.addEventListener("click", () => {
       nav.classList.remove("is-open");
@@ -23,3 +22,12 @@
     });
   });
 })();
+
+// Local-only form handler (no backend). Replace with Formspree/Netlify later.
+function handleContactSubmit(e){
+  e.preventDefault();
+  const status = document.getElementById("form-status");
+  if (status) status.textContent = "Thanks. Your message is ready to be connected to a backend.";
+  e.target.reset();
+  return false;
+}
